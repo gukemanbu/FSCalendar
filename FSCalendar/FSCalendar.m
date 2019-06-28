@@ -292,7 +292,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         }
         
         _contentView.frame = self.bounds;
-        CGFloat headerHeight = self.preferredHeaderHeight;
+        CGFloat headerHeight = self.calendarHeaderView.isHidden ? 0 : self.preferredHeaderHeight;
         CGFloat weekdayHeight = self.preferredWeekdayHeight;
         CGFloat rowHeight = self.preferredRowHeight;
         CGFloat padding = 5;
